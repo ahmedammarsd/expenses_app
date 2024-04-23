@@ -6,3 +6,5 @@ Color kDarkOne = const Color(0xff303745);
 Color kDarkTwo = const Color(0xff262831);
 Color kDarkThree = const Color(0xff292D3A);
 Color kBlack = const Color(0xff000000);
+Color kPrimary = const Color(0xff203B81);
+Color klightBlue = const Color(0xff12C6FF);
