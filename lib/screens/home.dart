@@ -1,3 +1,5 @@
+import 'package:expenses_app/charts/doughunt.dart';
+import 'package:expenses_app/charts/line.dart';
 import 'package:expenses_app/widgets/details_total_money_bank.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +21,12 @@ class _HomePageState extends State<HomePage> {
               //logo: "logo_new_ar.png",
               nameBank: "khartoum Bank",
               typeCurrency: "SDG",
-              totalMony: 10000)
+              totalMony: 10000),
+          LineChart(),
+          SizedBox(
+            height: 20,
+          ),
+          DoughnutChart(),
         ],
       ),
     );
