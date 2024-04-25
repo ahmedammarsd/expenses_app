@@ -37,6 +37,7 @@ dependencies:
   intl: ^0.19.0
   flutter_screenutil: ^5.9.0
   syncfusion_flutter_charts: ^25.1.41+1
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/bottom_app_bar/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

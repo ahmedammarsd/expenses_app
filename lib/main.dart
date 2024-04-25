@@ -1,4 +1,4 @@
-import 'package:expenses_app/screens/home.dart';
+import 'package:expenses_app/screens/tab_controller_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -32,10 +32,10 @@ class MyApp extends StatelessWidget {
           //
           // This works for code too, not just values: Most code changes can be
           // tested with just a hot reload.
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
+
+          useMaterial3: false,
         ),
-        home: const HomePage(),
+        home: const TabsControllerScreen(),
       );
     });
   }
