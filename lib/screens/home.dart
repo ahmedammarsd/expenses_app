@@ -1,5 +1,4 @@
-import 'package:expenses_app/charts/doughunt.dart';
-import 'package:expenses_app/charts/line.dart';
+import 'package:expenses_app/widgets/custome_bottom_app_bar.dart';
 import 'package:expenses_app/widgets/details_total_money_bank.dart';
 import 'package:flutter/material.dart';
 
@@ -15,18 +14,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      bottomNavigationBar: const CustomeBottomAppBar(),
       body: const Column(
         children: [
           DetailsTotalMoneyBank(
-              //logo: "logo_new_ar.png",
-              nameBank: "khartoum Bank",
-              typeCurrency: "SDG",
-              totalMony: 10000),
-          LineChart(),
-          SizedBox(
-            height: 20,
+            //logo: "logo_new_ar.png",
+            nameBank: "khartoum Bank",
+            typeCurrency: "SDG",
+            totalMony: 10000,
           ),
-          DoughnutChart(),
         ],
       ),
     );
