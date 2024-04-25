@@ -27,16 +27,26 @@ class _DoughnutChartState extends State<DoughnutChart> {
       width: double.infinity,
       height: 200.h,
       child: SfCircularChart(
-        legend: const Legend(isVisible: true),
+        legend: const Legend(
+            isVisible: true, overflowMode: LegendItemOverflowMode.wrap),
         tooltipBehavior: _tooltipBehavior,
         series: <CircularSeries>[
           DoughnutSeries<ExpensesAndIncome, String>(
             dataSource: _chartData,
             enableTooltip: true,
+            dataLabelSettings: const DataLabelSettings(
+              isVisible: true,
+              overflowMode: OverflowMode.hide,
+              textStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             pointColorMapper: (ExpensesAndIncome data, _) => data.color,
             xValueMapper: (ExpensesAndIncome data, _) => data.type,
             yValueMapper: (ExpensesAndIncome data, _) => data.total,
-          )
+            // explode: true,
+            // explodeAll: true,
+          ),
         ],
       ),
     );
@@ -44,8 +54,8 @@ class _DoughnutChartState extends State<DoughnutChart> {
 
   List<ExpensesAndIncome> getChartData() {
     final List<ExpensesAndIncome> chartData = [
-      ExpensesAndIncome("Income", 50000, Colors.green.shade300),
-      ExpensesAndIncome("Expenses", 90000, Colors.red.shade300),
+      ExpensesAndIncome("Income", 50000, Colors.green.shade500),
+      ExpensesAndIncome("Expenses", 90000, Colors.red.shade500),
     ];
     return chartData;
   }

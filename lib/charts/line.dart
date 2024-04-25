@@ -36,7 +36,7 @@ class _LineChartState extends State<LineChart> {
           LineSeries<IncomeData, double>(
             name: "Income",
             width: 3,
-            color: Colors.green.shade300,
+            color: Colors.green.shade500,
             dataSource: _chartDataIncome,
             xValueMapper: (IncomeData income, _) => income.day,
             yValueMapper: (IncomeData income, _) => income.income,
@@ -49,7 +49,7 @@ class _LineChartState extends State<LineChart> {
             name: "Expenses",
             width: 3,
             dataSource: _chartData,
-            color: Colors.red.shade300,
+            color: Colors.red.shade500,
             xValueMapper: (ExpensesData expense, _) => expense.day,
             yValueMapper: (ExpensesData expense, _) => expense.expenses,
             dataLabelSettings: const DataLabelSettings(
